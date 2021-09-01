@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block og %}
+<meta property="og:title" content="Patbox's Website">
+<meta property="og:description" content="Yep that's my website!">
+<meta property="og:url" content="{{current_url}}">
+{% endblock og %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+{% endblock head %}
+
+{% block body %}
+<div id="root">
+  <div id="home">
+	  <img src="images/awatar.png" id="avatar">
+	  <h1>Hello! I'm Patbox!</h1>
+	  I'm a Fabric modder trying to make it's server side ecosystem better one mod/library at the time.
+	  <nav id="navbar">  
+		  <div><a href="discord">Discord</a></div>
+		  <div><a href="https://www.curseforge.com/members/patbox/projects">Curseforge</a></div>
+		  <div><a href="https://modrinth.com/user/Patbox">Modrinth</a></div>
+		  <div><a href="https://github.com/Patbox">Github</a></div>
+	  </nav>
+  </div>
+
+  {% for type in ["mods", "libraries", "otherprj"] %}
+
+  {% set section = get_section(path=type ~ "/_index.md") %}
+  <div class="content container" id="{{ type | safe}}">
+    <h1 class="title">{{ section.title | safe}}</h1>
+    <div class="projects">
+        {% for page in section.pages %}
+        <div class="item">
+            <div class="icon">
+              <img src="{{ page.extra.header | default(value='images/fallback.png') | safe }}" class="pure-img">
+            </div>
+			<div class="side">
+				<h2 style="pointer-events:none;">{{ page.title }}</h2>
+				<div class="desc">
+				{{ page.content | safe }}
+				</div>
+				<div class="links">
+					{% if page.extra.page %}
+						<a href="{{ page.extra.page | safe }}" style="background-color: rgb(128, 0, 0)">Github</a>
+					{% endif %}
+					{% if page.extra.docs %}
+						<a href="{{ page.extra.docs | safe }}" style="background-color: rgb(30, 30, 145)">Docs</a>
+					{% endif %}
+					{% if page.extra.curseforge %}
+						<a href="{{ page.extra.curseforge | safe }}" style="background-color: rgb(233, 153, 4);">
+							Curseforge
+						</a>
+					{% endif %}
+					{% if page.extra.modrinth %}
+						<a href="{{ page.extra.modrinth | safe }}" style="background-color: rgb(119, 199, 0);">
+							Modrinth
+						</a>
+					{% endif %}
+					{% if page.extra.github %}
+						<a href="{{ page.extra.github | safe }}" style="background-color: rgb(37, 37, 37)">Github</a>
+					{% endif %}
+				</div>
+			</div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<script src="js/index.js"></script>
+{% endblock body %}
