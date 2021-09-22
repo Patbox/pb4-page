@@ -82,17 +82,11 @@ html, body {
 	font-weight: bold;
 	font-style: normal;
 	text-decoration: none;
-	margin-right: 0.3em;
 	border-radius: 0.2em;
 	color: white;
 	padding: 0.3em;
 	display: inline-block;
 }
-
-.projects .item .side .links a:last-child {
-	margin-right: 0;
-}
-
 
 .projects .item .side .links a img {
 	max-width: 100%;
@@ -129,13 +123,6 @@ html, body {
 
 #home nav div {
 	display: inline-block;
-}
-
-#home nav div:first-child {
-	margin-left: 1em;
-}
-#home nav div:last-child {
-	margin-right: 1em;
 }
 
 .seperated::after {
