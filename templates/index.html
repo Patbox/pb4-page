@@ -21,6 +21,8 @@
 		  <div><a href="https://www.curseforge.com/members/patbox/projects">Curseforge</a></div>
 		  <div><a href="https://modrinth.com/user/Patbox">Modrinth</a></div>
 		  <div><a href="https://github.com/Patbox">Github</a></div>
+		  <div><a href="https://twitter.com/TruePatbox">Twitter</a></div>
+		  <div><a href="https://mastodon.online/web/@Patbox">Mastodon</a></div>
 	  </nav>
   </div>
 
@@ -31,7 +33,7 @@
     <h1 class="title">{{ section.title | safe}}</h1>
     <div class="projects">
         {% for page in section.pages %}
-        <div class="item">
+        <div class="item" id="{{ page.slug | safe }}">
             <div class="icon">
               <img src="{{ page.extra.header | default(value='images/fallback.png') | safe }}" class="pure-img">
             </div>
@@ -46,6 +48,9 @@
 					{% endif %}
 					{% if page.extra.docs %}
 						<a href="{{ page.extra.docs | safe }}" style="background-color: rgb(30, 30, 145)">Docs</a>
+					{% endif %}
+					{% if page.extra.discord %}
+						<a href="{{ page.extra.discord | safe }}" style="background-color: #7289DA">Discord</a>
 					{% endif %}
 					{% if page.extra.curseforge %}
 						<a href="{{ page.extra.curseforge | safe }}" style="background-color: rgb(233, 153, 4);">
