@@ -121,6 +121,11 @@ html, body {
 	color: white;
 }
 
+#home nav a:hover {
+	color: rgb(218, 248, 255);
+}
+
+
 #home nav div {
 	display: inline-block;
 }
