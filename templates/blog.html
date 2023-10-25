@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta property="og:url" content="{{current_url}}">
+{% endblock head %}
+
+{% block body %}
+  <div class="project_container">
+    {% block content %} {% endblock %}
+  </div>
+{% endblock body %}

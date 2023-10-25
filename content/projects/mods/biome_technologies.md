@@ -12,4 +12,4 @@ This mod adds machines/tools related to biomes and modification of them. This mo
 however it's compatible with singleplayer and modpacks. 
 When used on client or with Polymer's server resource pack, guis will use custom textures.
 
-**Originally made for [Modfest: Singularity (2022)](https://modfest.net/)**
+**Originally made for [Modfest: Singularity (2022)](https://modfest.net/singularity)**

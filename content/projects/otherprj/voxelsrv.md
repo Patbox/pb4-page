@@ -4,8 +4,8 @@ title = "VoxelSrv (Noa/TS version)"
 [extra]
 header = "images/otherprj/voxelsrv.png"
 
-website = "https://voxelsrv-master.pb4.eu"
-github = "https://github.com/VoxelSrv/voxelsrv-old"
+website = "http://voxelsrv-master.pb4.eu"
+github = "https://github.com/VoxelSrv/"
 discord = "https://discord.gg/K9PdsDh"
 
 +++
