@@ -60,6 +60,31 @@ html, body {
 	width: 100%;
 }
 
+#home_blog img {
+	object-fit: contain;
+	width: 100%;
+	max-height: 60vh;
+}
+
+#nav_avatar {
+	height: 64px;
+	width: auto;
+	border-radius: 100%;
+	margin-right: 16px;
+}
+
+#nav_blog {
+	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #000000bb;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 8px;
+}
+
 .projects .item {
 	box-shadow: 0 0 0.8em black;
 	padding: 1.2em;
@@ -187,23 +212,25 @@ html, body {
 	text-shadow: 0 0 0.15em black;
 }
 
-#home nav, #home_blog nav {
+#home_nav {}
+
+.navbar, #home_blog nav {
 	margin-top: 1em;
 	font-size: 1.3em;
 	font-weight: bold;
 	width: auto;
 }
 
-#home nav a, #home_blog nav a {
+.navbar a, #home_blog nav a {
 	color: white;
 }
 
-#home nav a:hover, #home_blog nav a:hover {
+.navbar a:hover, #home_blog nav a:hover {
 	color: rgb(218, 248, 255);
 }
 
 
-#home nav div, #home_blog div {
+.navbar div, #home_blog div {
 	display: inline-block;
 }
 

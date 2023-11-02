@@ -1,5 +1,5 @@
 +++
 title = "Other Projects"
-sort_by = "none"
+sort_by = "slug"
 transparent = true
 +++

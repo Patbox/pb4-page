@@ -3,9 +3,18 @@
 {% block head %}
 <meta property="og:url" content="{{current_url}}">
 {% endblock head %}
-
 {% block body %}
+  <nav id="nav_blog">
+    <img src="/images/awatar.png" id="nav_avatar" />
+    <div class="navbar">
+      <div><a href="/">Home & Links</a></div>
+      <div><a href="/blog/">Blog</a></div>
+      <div><a href="/discord/">Discord</a></div>
+    </div>
+  </nav>
+
   <div class="project_container">
     {% block content %} {% endblock %}
   </div>
+  <script src="/js/index.js"></script>
 {% endblock body %}
