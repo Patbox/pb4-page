@@ -3,7 +3,7 @@ title = "Polymer Ports"
 
 [extra]
 header = "images/mods/polymer_ports.png"
-modrinth = "https://modrinth.com/mods?q=%22Polymer%20Port%22"
+modrinth = "https://modrinth.com/collection/kXdqNZTO"
 github = "https://github.com/PolymerPorts"
 +++
 

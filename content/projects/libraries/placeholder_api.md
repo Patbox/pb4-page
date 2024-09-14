@@ -4,6 +4,7 @@ title = "Placeholder API"
 [extra]
 header = "images/libraries/papi.png"
 modrinth = "https://modrinth.com/mod/placeholder-api"
+curseforge = "https://www.curseforge.com/minecraft/mc-mods/text-placeholder-api"
 github = "https://github.com/Patbox/TextPlaceholderAPI"
 docs = "https://placeholders.pb4.eu/"
 +++

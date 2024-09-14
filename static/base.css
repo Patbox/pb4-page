@@ -190,15 +190,22 @@ html, body {
 	border-radius: 100%;
 }
 
-#home {
-	margin-top: 5em;
-	margin-bottom: 3em;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1em;
+#title_card {
+	min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    align-items: safe center;
+    justify-content: safe center;
+    margin-bottom: 20px;
 	text-align: center;
 	font-size: 1.3em;
 	text-shadow: 0 0 0.15em black;
+}
+
+#title_card_inner {
+	padding: 1em;
 }
 
 #home_blog {
@@ -212,8 +219,6 @@ html, body {
 	text-shadow: 0 0 0.15em black;
 }
 
-#home_nav {}
-
 .navbar, #home_blog nav {
 	margin-top: 1em;
 	font-size: 1.3em;
@@ -225,8 +230,17 @@ html, body {
 	color: white;
 }
 
-.navbar a:hover, #home_blog nav a:hover {
-	color: rgb(218, 248, 255);
+.navbar a:hover, .navbar a:focus,  #home_blog nav a:hover {
+	color: rgb(192, 241, 252);
+}
+
+.navbar a {
+	transition-duration: 100ms;
+	display: inline-block;
+}
+
+.navbar a:hover, .navbar a:focus {
+	transform: translate(0px, -0.1em);
 }
 
 
@@ -238,9 +252,73 @@ html, body {
     content: " | ";
 }
 
-#home h1, #home_blog h1 {
+#title_card h1, #home_blog h1 {
 	font-size: 2.3em;
 }
+.website_button {
+	background-color: rgb(128, 0, 0)
+}
+
+.website_button:hover, .website_button:focus {
+	background-color: rgb(150, 20, 20)
+}
+
+.youtube_button {
+	background-color: rgb(255, 0, 0)
+}
+
+.youtube_button:hover, .youtube_button:focus {
+	background-color: rgb(255, 57, 57)
+}
+
+.discord_button {
+	background-color: #7289da
+}
+
+.discord_button:hover, .discord_button:focus {
+	background-color: #9aacee
+}
+
+.modrinth_button {
+	background-color: rgb(107, 179, 0)
+}
+
+.modrinth_button:hover, .modrinth_button:focus {
+	background-color: rgb(119, 199, 0)
+}
+
+.crustfroge_button {
+	background-color: rgb(214, 140, 3)
+}
+
+.crustfroge_button:hover, .crustfroge_button:focus {
+	background-color: rgb(233, 153, 4)
+}
+
+.docs_button {
+	background-color: rgb(30, 30, 145)
+}
+
+.docs_button:hover, .docs_button:focus {
+	background-color: rgb(49, 49, 167)
+}
+
+.github_button {
+	background-color: rgb(37, 37, 37)
+}
+
+.github_button:hover, .github_button:focus {
+	background-color: rgb(63, 63, 63)
+}
+
+.project_button {
+	transition-duration: 200ms;
+}
+
+.project_button:hover, .project_button:focus {
+	transform: translate(0px, -0.1em);
+}
+
 
 
 @media (max-width: 800px) {

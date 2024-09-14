@@ -6,31 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.8" />
 {% endblock head %} {% block body %}
 <div id="root">
-	<div id="home">
-		<img src="images/awatar.png" id="avatar" />
-		<h1>Hello! I'm Patbox!</h1>
-		I'm a Fabric modder trying to make Minecraft's Server Modding ecosystem better one mod/library at the time.
-		<nav class="navbar">
-			<div><a href="blog">Blog</a></div>
-			<div><a href="discord">Discord</a></div>
-			<div><a href="https://modrinth.com/user/Patbox">Modrinth</a></div>
-			<div><a href="https://www.curseforge.com/members/patbox/projects">Curseforge</a></div>
-			<div><a href="https://github.com/Patbox">Github</a></div>
-			<div><a href="https://www.youtube.com/@TruePatbox/">YouTube</a></div>
-			<div><a href="https://twitter.com/TruePatbox">Twitter</a></div>
-			<div><a href="https://mastodon.online/@Patbox">Mastodon</a></div>
-			<div><a href="https://ko-fi.com/patbox">Donate (Ko-Fi)</a></div>
-		</nav>
+	<div id="title_card">
+		<div id="title_card_inner">
+			<img src="images/awatar.png" id="avatar" />
+			<h1>Hello! I'm Patbox!</h1>
+			I'm a modder trying to make Minecraft's Server Modding ecosystem better one mod/library at the time.
+			<nav class="navbar">
+				<div><a href="blog">Blog</a></div>
+				<div><a href="discord">Discord</a></div>
+				<div><a href="https://modrinth.com/user/Patbox">Modrinth</a></div>
+				<div><a href="https://www.curseforge.com/members/patbox/projects">Curseforge</a></div>
+				<div><a href="https://github.com/Patbox">Github</a></div>
+				<div><a href="https://www.youtube.com/@TruePatbox/">YouTube</a></div>
+				<div><a href="https://twitter.com/TruePatbox">Twitter</a></div>
+				<div><a href="https://mastodon.online/@Patbox">Mastodon</a></div>
+				<div><a href="https://ko-fi.com/patbox">Donate (Ko-Fi)</a></div>
+			</nav>
 
-		<nav class="navbar">
-			<div><a href="#mods">Mods</a></div>
-			<div><a href="#libraries">Libraries (Minecraft)</a></div>
-			<div><a href="#otherprj">Other projects</a></div>
-		</nav>
+			<nav class="navbar">
+				<div><a href="#mods">Mods</a></div>
+				<div><a href="#modpacks">Modpacks</a></div>
+				<div><a href="#libraries">Libraries (Minecraft)</a></div>
+				<div><a href="#otherprj">Other projects</a></div>
+			</nav>
+		</div>
 	</div>
 
 	<div class="project_container">
-		{% for type in ["mods", "libraries", "otherprj"] %} {% set section = get_section(path = "projects/" ~ type ~ "/_index.md") %}
+		{% for type in ["mods", "modpacks", "libraries", "otherprj", "discontinuedmods"] %} {% set section = get_section(path = "projects/" ~ type ~ "/_index.md") %}
 		<div class="content" id="{{ type | safe }}">
 			<div>
 				<h1 class="title">{{ section.title | safe }}</h1>
@@ -45,7 +48,7 @@
 							<div class="desc">{{ page.content | safe }}</div>
 							<div class="links">
 								{% if page.extra.website %}
-								<a href="{{ page.extra.website | safe }}" style="background-color: rgb(128, 0, 0)">
+								<a href="{{ page.extra.website | safe }}" class="website_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -63,7 +66,7 @@
 									Website
 								</a>
 								{% endif %} {% if page.extra.discord %}
-								<a href="{{ page.extra.discord | safe }}" style="background-color: #7289da">
+								<a href="{{ page.extra.discord | safe }}" class="discord_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -79,7 +82,7 @@
 									Discord
 								</a>
 								{% endif %} {% if page.extra.modrinth %}
-								<a href="{{ page.extra.modrinth | safe }}" style="background-color: rgb(119, 199, 0)">
+								<a href="{{ page.extra.modrinth | safe }}" class="modrinth_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -97,7 +100,7 @@
 									Modrinth
 								</a>
 								{% endif %} {% if page.extra.curseforge %}
-								<a href="{{ page.extra.curseforge | safe }}" style="background-color: rgb(233, 153, 4)">
+								<a href="{{ page.extra.curseforge | safe }}" class="crustfroge_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -115,7 +118,7 @@
 									Curseforge
 								</a>
 								{% endif %} {% if page.extra.docs %}
-								<a href="{{ page.extra.docs | safe }}" style="background-color: rgb(30, 30, 145)">
+								<a href="{{ page.extra.docs | safe }}" class="docs_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -135,7 +138,7 @@
 									Docs
 								</a>
 								{% endif %} {% if page.extra.github %}
-								<a href="{{ page.extra.github | safe }}" style="background-color: rgb(37, 37, 37)">
+								<a href="{{ page.extra.github | safe }}" class="github_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -153,7 +156,7 @@
 									Github
 								</a>
 								{% endif %} {% if page.extra.youtube %}
-								<a href="{{ page.extra.youtube | safe }}" style="background-color: rgb(255, 0, 0)">
+								<a href="{{ page.extra.youtube | safe }}" class="youtube_button project_button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
